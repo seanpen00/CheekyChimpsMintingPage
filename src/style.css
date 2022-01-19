@@ -1,0 +1,24 @@
+.object {
+    animation: MoveUpDown 5s linear infinite;
+  }
+  
+  /* @keyframes MoveUpDown {
+    0% {
+        transform: translateY(15px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(15px);
+    }
+  } */
+
+/* .logoShadow {
+    box-shadow: 0px 0px 20px black;
+} */
+
+@font-face {
+    font-family: newfont;
+    src: url(../src/assets/fonts/Poppins-ExtraLight.ttf);
+}
