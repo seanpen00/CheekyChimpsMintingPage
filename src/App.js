@@ -6,7 +6,7 @@ import * as s from "./styles/globalStyles";
 import styled from "styled-components";
 import i1 from "./assets/images/kr3.png";
 import newbanner from "./assets/images/logo.png";
-import capture from "./assets/images/capture.PNG";
+import capture from "./assets/images/capture.png";
 import "./style.css";
 import { urlSource } from "ipfs-http-client";
 
@@ -148,7 +148,7 @@ function App() {
           <a href="https://cheekychimps.club/">
             <StyledImg
               className="logoShadow"
-              alt={"KRebels Logo"}
+              alt={"CC Logo"}
               src={
                 "https://cheekychimps.club/static/media/CenterPic.7f3fb613.png"
               }
@@ -164,21 +164,10 @@ function App() {
             ai={"center"}
             style={{ paddingTop: 0, flexDirection: "column" }}
           >
-            <s.TextTitle
-              style={{
-                textAlign: "center",
-                fontSize: 30,
-                borderStyle: "solid",
-                borderColor: "black",
-                fontFamily: "newfont",
-                color: "white"
-              }}
-            >
-              0.06 ETH + Gas
-            </s.TextTitle>
+            
             <StyledImg
           className="object"
-          alt={"KRebel"}
+          alt={"CC"}
           src={"https://cheekychimps.club/static/media/Cheeky.7c2d0d97.gif"}
           style={{
             paddingTop: 0,
@@ -192,7 +181,19 @@ function App() {
           }}
         />
         <text style={{color: "white", fontFamily: "newfont"}}>{blockchain.account == null ? "?" : data.totalSupply} / 11,111 minted</text>
-        <s.SpacerSmall/>
+        <s.TextTitle
+              style={{
+                textAlign: "center",
+                fontSize: 30,
+                borderStyle: "solid",
+                borderColor: "black",
+                fontFamily: "newfont",
+                color: "white"
+              }}
+            >
+              0.06 ETH + Gas
+            </s.TextTitle>
+        {/* <s.SpacerSmall/> */}
             <s.TextTitle
               style={{
                 textAlign: "center",
@@ -214,13 +215,13 @@ function App() {
               jc={"center"}
               ai={"center"}
               style={{
-                backgroundImage: ,
+                backgroundImage: 'url("https://github.com/seanpen00/CheekyChimpsMintingPage/blob/main/src/assets/images/capture.png?raw=true")',
                 padding: 24,
                 paddingTop: 0,
                 borderStyle: "solid",
                 borderColor: "black",
-                borderWidth: 0,
-                borderRadius: 30,
+                borderWidth: 10,
+                borderRadius: 0,
                 fontSize: 40,
                 maxWidth: 1000,
                 textAlign: "center",
@@ -365,8 +366,9 @@ function App() {
               href="https://etherscan.io/address/0x5f96FdF27fB8D38d317BA94f642f6BE39080c71E"
               style={{
                 textDecoration: "none",
-                color: "black",
+                color: "white",
                 fontSize: 20,
+                fontFamily: "newfont"
               }}
             >
               Cheeky Chimps Smart Contract
