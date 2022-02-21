@@ -85,10 +85,10 @@ function App() {
       // ********
       .send({
         gasLimit: 285000 * _amount,
-        to: "0x5f96FdF27fB8D38d317BA94f642f6BE39080c71E", // the address of your contract
+        to: "0xcaA37C3822Cc2e7ABD2Ae2FE7EE85F053220A650", // the address of your contract
         from: blockchain.account,
         value: blockchain.web3.utils.toWei(
-          (0.06 * _amount).toString(),
+          (0.0601 * _amount).toString(),
           "ether"
         ),
       })
@@ -124,7 +124,7 @@ function App() {
         style={{
           padding: 24,
           backgroundImage:
-            'url("https://cheekychimps.club/static/media/brickwall.41a696bb.png")',
+            'url("https://github.com/CheekyChimpsClub/Website/blob/main/static/media/brickwall.41a696bb.png?raw=true")',
         }}
       >
         <s.TextTitle
@@ -150,7 +150,7 @@ function App() {
               className="logoShadow"
               alt={"CC Logo"}
               src={
-                "https://cheekychimps.club/static/media/CenterPic.7f3fb613.png"
+                "https://github.com/CheekyChimpsClub/Website/blob/main/static/media/CenterPic.7f3fb613.png?raw=true"
               }
               style={{ width: 100, height: 100, textAlign: "center" }}
             ></StyledImg>
@@ -164,24 +164,55 @@ function App() {
             ai={"center"}
             style={{ paddingTop: 0, flexDirection: "column" }}
           >
-            
-            <StyledImg
-          className="object"
-          alt={"CC"}
-          src={"https://cheekychimps.club/static/media/Cheeky.7c2d0d97.gif"}
-          style={{
-            paddingTop: 0,
-            borderStyle: "solid",
-            borderColor: "black",
-            borderWidth: 5,
-            borderRadius: 5,
-            marginBottom: 15,
-            height: 300,
-            width: 230
-          }}
-        />
-        <text style={{color: "white", fontFamily: "newfont"}}>{blockchain.account == null ? "?" : data.totalSupply} / 11,111 minted</text>
-        <s.TextTitle
+            <div style={{ display: "flex", flexDirection: "row" }}>
+              <StyledImg
+                className="object"
+                alt={"CC"}
+                src={"https://github.com/CheekyChimpsClub/Website/blob/main/static/media/Cheeky.7c2d0d97.gif?raw=true"}
+                style={{
+                  paddingTop: 0,
+                  borderStyle: "solid",
+                  borderColor: "black",
+                  borderWidth: 5,
+                  borderRadius: 5,
+                  marginBottom: 15,
+                  height: 300,
+                  width: 230
+                }}
+              />
+              <StyledImg
+                className="object"
+                alt={"CC"}
+                src={"https://github.com/CheekyChimpsClub/Website/blob/main/static/media/Evil.4c83a1de.gif?raw=true"}
+                style={{
+                  paddingTop: 0,
+                  borderStyle: "solid",
+                  borderColor: "black",
+                  borderWidth: 5,
+                  borderRadius: 5,
+                  marginBottom: 15,
+                  height: 300,
+                  width: 230
+                }}
+              />
+              <StyledImg
+                className="object"
+                alt={"CC"}
+                src={"https://github.com/CheekyChimpsClub/Website/blob/main/static/media/Super.ff4160f4.gif?raw=true"}
+                style={{
+                  paddingTop: 0,
+                  borderStyle: "solid",
+                  borderColor: "black",
+                  borderWidth: 5,
+                  borderRadius: 5,
+                  marginBottom: 15,
+                  height: 300,
+                  width: 230
+                }}
+              />
+            </div>
+
+            <s.TextTitle
               style={{
                 textAlign: "center",
                 fontSize: 30,
@@ -193,7 +224,8 @@ function App() {
             >
               0.06 ETH + Gas
             </s.TextTitle>
-        {/* <s.SpacerSmall/> */}
+            <text style={{ color: "white", fontFamily: "newfont", fontSize: 25 }}>{blockchain.account == null ? "?" : data.totalSupply} / 11,111 minted</text>
+            {/* <s.SpacerSmall/> */}
             <s.TextTitle
               style={{
                 textAlign: "center",
@@ -261,7 +293,7 @@ function App() {
                   </s.TextDescription>
                   {/* <s.SpacerMedium /> */}
                   {blockchain.account === "" ||
-                  blockchain.smartContract === null ? (
+                    blockchain.smartContract === null ? (
                     <s.Container ai={"center"} jc={"center"}>
                       <s.TextDescription
                         className="connectMint"
@@ -278,13 +310,13 @@ function App() {
                       <s.SpacerSmall />
                       <StyledButton
                         onClick={(e) => {
-                          e.preventDefault();
-                          dispatch(connect());
-                          getData();
+                          // e.preventDefault();
+                          // dispatch(connect());
+                          // getData();
                           // UNCOMMENT THESE WHEN YOU ARE READY TO LAUNCH.
                         }}
                       >
-                        Connect Wallet
+                        MINTING PAUSED
                       </StyledButton>
                       <s.SpacerLarge />
                       {/* <s.TextDescription style={{textAlign: "center", fontSize: 30, marginBottom: 0, paddingBottom: 0}}>
@@ -318,7 +350,6 @@ function App() {
                           max="10"
                           style={{
                             fontSize: 40,
-                            fontFamily: "newfont",
                             textAlign: "center",
                             backgroundColor: "white",
                             borderWidth: 3,
@@ -352,18 +383,18 @@ function App() {
                 </>
               )}
               <br />
-              
+
             </s.Container>
           </s.Container>
           {/* <s.SpacerMedium /> */}
         </ResponsiveWrapper>
-        
+
 
         <s.SpacerSmall />
         <s.Container jc={"center"} ai={"center"} style={{ width: "70%" }}>
           <s.TextDescription style={{ textAlign: "center", fontSize: 40 }}>
             <a
-              href="https://etherscan.io/address/0x5f96FdF27fB8D38d317BA94f642f6BE39080c71E"
+              href="https://etherscan.io/address/0xcaA37C3822Cc2e7ABD2Ae2FE7EE85F053220A650"
               style={{
                 textDecoration: "none",
                 color: "white",
